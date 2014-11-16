@@ -3,7 +3,7 @@ public class conditionone {
     long strt = System.nanoTime();
     int pn = Integer.parseInt(args[0]);
     int tot = 0;
-    for(int kj = 0; kj < 1000; kj++){
+    for(int kj = 0; kj < 1000; kj++) {
       if(kj != 0){
         pn = tot;
       }
