@@ -1,0 +1,39 @@
+public class conditionone {
+  public static void main(String[] args) {
+    long strt = System.nanoTime();
+    int pn = Integer.parseInt(args[0]);
+    int tot = 0;
+    for(int kj = 0; kj < 1000; kj++){
+      if(kj != 0){
+        pn = tot;
+      }
+        int tstr = 2 ;
+        int prnt = pn;
+        int i = 0;
+        int[] factors = new int[50];
+        for(int cnt = 0; tstr*tstr <= pn ; cnt++) {
+          if (pn%tstr == 0) {
+            factors[i] = (tstr);
+            pn = pn/tstr;
+            i++;
+          }
+          else {
+            tstr++;
+          }
+        }
+        int z = 0;
+        factors[i+1] = (pn);
+        System.out.print("The Prime Factorization of " + prnt + " is ");
+        for(; (factors[z]) != 0; z++) {
+          System.out.print(factors[z] + "*");
+          tot +=(factors[z]);
+        }
+        System.out.print(factors[z+1] );
+        tot +=(factors[z+1]);
+        System.out.println(". The total of these integers is " + tot + ".");
+      }
+    long fnsh = System.nanoTime();
+    long time = fnsh - strt;
+    System.out.println("The run time for this trial is " + time + " nanoseconds.");
+    }
+  }
